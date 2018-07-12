@@ -197,7 +197,7 @@ def print_instance_info(instance, name_tag, date_tag, email_name):
 
 def send_mail(email_name, ec2_name, mail_type):
     """
-    Send a mail to the user with a link to Scope, and CC GCOTechDevOpsSupportDL
+    Send a mail to the user with a link to Scope, and CC DevOpsSupportDL
     """
 
     # if no email account, return
@@ -240,18 +240,18 @@ def mail_warning(ec2_name):
     :param ec2_name:
     :return:
     """
-    mail_subject = 'AWS EC2 instance WARNING in the GCO ' + environment + ' Environment'
-    html_body = "<h1>AWS GCO " + environment + " EC2 instance : " + str(ec2_name) + " is " + \
+    mail_subject = 'AWS EC2 instance WARNING in the TEAM ' + environment + ' Environment'
+    html_body = "<h1>AWS TEAM " + environment + " EC2 instance : " + str(ec2_name) + " is " + \
                 str(mail_warning_delta) + " days from termination date." \
                 "</h1><h2>Your EC2 Instance has been active for " + str(max_terminate-mail_warning_delta) + \
                 " days. </h2><p>To keep your EC2 instance active for longer than " + str(max_terminate) + \
                 " days, update the Expiration Date tag for the EC2 instance on a regular schedule.</p>" + \
                 "<p>If your EC2 instance needs to be active for more than " + str(max_terminate) + \
-                " days please contact GCO Tech DevOps and request for your EC2 instance to be whitelisted.<p>" +\
-                "<h3>For any questions, please email GCO Tech DevOps: " + sender + "</h3>"
-    text_body = "AWS GCO " + environment + \
+                " days please contact Tech DevOps and request for your EC2 instance to be whitelisted.<p>" +\
+                "<h3>For any questions, please email Tech DevOps: " + sender + "</h3>"
+    text_body = "AWS TEAM " + environment + \
                 " Warning of impending termination of EC2 instance: " + str(ec2_name) + \
-                ".  For any questions, please email GCO Tech DevOps: " + sender
+                ".  For any questions, please email Tech DevOps: " + sender
 
     mail_message = {'Subject': {'Data': mail_subject, 'Charset': 'utf8'},
                     'Body': {'Text': {'Data': text_body, 'Charset': 'utf8'},
@@ -266,17 +266,17 @@ def mail_deletion(ec2_name):
     :param ec2_name:
     :return:
     """
-    mail_subject = 'Termination of AWS EC2 instance in the GCO ' + environment + ' Environment'
-    html_body = "<h1>AWS GCO " + environment + " EC2 instance : " + str(ec2_name) + " has been terminated." \
+    mail_subject = 'Termination of AWS EC2 instance in the TEAM ' + environment + ' Environment'
+    html_body = "<h1>AWS TEAM " + environment + " EC2 instance : " + str(ec2_name) + " has been terminated." \
                 "</h1><h2>Your EC2 Instance has been active for " + str(max_terminate) + " days. </h2>" + \
                 "<p>To keep your EC2 instance active for longer than " + str(max_terminate) + \
                 " days in the future, update the Expiration Date tag for the EC2 instance on a regular " + \
                 "schedule.</p><p>If your EC2 instance needs to be active for more than 60 days please contact " + \
-                "GCO Tech DevOps and request for your RDS instance to be whitelisted.<p>" +\
-                "<h3>For any questions, please email GCO Tech DevOps: " + sender + "</h3>"
-    text_body = "AWS GCO " + environment + \
+                "Tech DevOps and request for your RDS instance to be whitelisted.<p>" +\
+                "<h3>For any questions, please email Tech DevOps: " + sender + "</h3>"
+    text_body = "AWS TEAM " + environment + \
                 " Termination of EC2 instance: " + str(ec2_name) + \
-                ".  For any questions, please email GCO Tech DevOps: " + sender
+                ".  For any questions, please email Tech DevOps: " + sender
 
     mail_message = {'Subject': {'Data': mail_subject, 'Charset': 'utf8'},
                     'Body': {'Text': {'Data': text_body, 'Charset': 'utf8'},
