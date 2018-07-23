@@ -26,5 +26,11 @@ https://cloud.netapp.com/blog/automate-ebs-volumes-cost-efficiency
 
 https://mike.lapidak.is/thoughts/lambda-tracking-orphaned-ebs-volumes
 
+############## SendMail function using boto ###########
+
+https://stackoverflow.com/questions/43157065/error-on-amazon-ses-sendemail-operation-illegal-addres
+
+
+
 
 
