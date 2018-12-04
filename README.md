@@ -30,6 +30,22 @@ https://mike.lapidak.is/thoughts/lambda-tracking-orphaned-ebs-volumes
 
 https://stackoverflow.com/questions/43157065/error-on-amazon-ses-sendemail-operation-illegal-addres
 
+#VPC - Notify On Invalid External Peering Connections
+
+https://www.capitalone.io/docs/usecases/vpcpeeringcrossaccount.html
+
+
+#RDS - Terminate Unencrypted Public Instances
+
+https://www.capitalone.io/docs/usecases/rdspublicunencrypted.html
+
+#RDS - Delete Unused Databases With No Connections
+
+https://www.capitalone.io/docs/usecases/rdsdeleteunused.html
+
+#Lambda Function to maintain s3 lifecycle managment
+
+https://github.com/aws-samples/aws-lambda-lifecycle-hooks-function/blob/master/lambda_backup.py
 
 
 
