@@ -7,7 +7,7 @@ logger.setLevel(logging.WARNING)
 
 ec2 = boto3.resource('ec2', region_name="us-west-2")
 sns = boto3.resource('sns')
-platform_endpoint = sns.PlatformEndpoint('arn:aws:sns:us-west-2:<AWS-Account-ID>:<SNS-Topic-Name>')
+platform_endpoint = sns.PlatformEndpoint('arn:aws:sns:us-west-2:<Your-Account-ID>:my-class-v1')
 
 today = datetime.now().date()
 
@@ -25,7 +25,7 @@ def lambda_handler(event, context):
 
     #only send a Message to report if there are any Unattached EBS Volume
     if x == 0:
-        print "Nothing to Report"
+        print ("Nothing to Report")
     else:
         response = platform_endpoint.publish(
             Message=MessageToReport,
@@ -33,4 +33,4 @@ def lambda_handler(event, context):
             MessageStructure='string',
         )
 
-        print MessageToReport
+        print (MessageToReport)
