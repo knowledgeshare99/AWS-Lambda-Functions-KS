@@ -47,7 +47,7 @@ def lambda_handler(event, context):
     else:
         response = platform_endpoint.publish(
             Message=MessageToReport,
-            Subject='EBS Orphaned Volumes Report: ' + str(today),
+            Subject='EBS Orphaned Available Volumes and Deleting the Report: ' + str(today),
             MessageStructure='string',
         )
 
